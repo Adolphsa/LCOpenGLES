@@ -9,6 +9,8 @@
 #include "sample/TriangleSample.h"
 #include "sample/RectangleSample.h"
 #include "sample/LoadImageSample.h"
+#include "sample/CubeSample.h"
+#include "sample/CubeImageSample.h"
 
 #include <GLES3/gl3.h>
 
@@ -16,7 +18,9 @@
 LCOpenGLShader m_ndkOpenGLShader;
 //TriangleSample m_triangleSample;
 //RectangleSample m_rectangleSample;
-LoadImageSample m_LoadImageSample;
+//LoadImageSample m_LoadImageSample;
+//CubeSample m_CubeSample;
+CubeImageSample m_CubeImageSample;
 
 #ifdef __cplusplus
 extern "C" {
@@ -32,20 +36,21 @@ void Java_com_lc_les_LCGLRender_ndkInit(JNIEnv *env, jobject obj, jobject assetM
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
 
-    m_LoadImageSample.Init(astManager);
+    m_CubeImageSample.Init(astManager);
 }
 
 
 void Java_com_lc_les_LCGLRender_ndkPaintGL(JNIEnv *env, jobject obj)
 {
-    m_LoadImageSample.Draw();
+    m_CubeImageSample.Draw();
 }
 
 
 void Java_com_lc_les_LCGLRender_ndkResizeGL(JNIEnv *env, jobject obj, jint width, jint height)
 {
-    LOGD("ndkResizeGL");
+    LOGD("ndkResizeGL width = %d, height = %d", width, height);
     glViewport(0, 0, width, height);
+    m_CubeImageSample.SetWidthAndHeight(width, height);
 
 }
 

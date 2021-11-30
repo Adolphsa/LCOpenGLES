@@ -14,7 +14,9 @@ set(LIB_SRC ${CPPDIR}/LCImage.cpp
             ${CPPDIR}/LCOpenGLRender.cpp
             ${CPPDIR}/sample/TriangleSample.cpp
             ${CPPDIR}/sample/RectangleSample.cpp
-            ${CPPDIR}/sample/LoadImageSample.cpp)
+            ${CPPDIR}/sample/LoadImageSample.cpp
+            ${CPPDIR}/sample/CubeSample.cpp
+            ${CPPDIR}/sample/CubeImageSample.cpp)
 
 add_library(LCOpenGLRender SHARED ${LIB_SRC})
 

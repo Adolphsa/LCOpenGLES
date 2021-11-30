@@ -22,6 +22,8 @@
 #include <android/asset_manager.h>
 #include "LCNDKLogDef.h"
 
+#define MATH_PI 3.1415926535897932384626433832802
+
 template<typename T>
 void CCGLSafePtrDelete(T* ptr)
 {
