@@ -10,13 +10,18 @@ include_directories(${STBIMG_DIR}/include)
 
 set(LIB_SRC ${CPPDIR}/LCImage.cpp
             ${CPPDIR}/LCGLTexture.cpp
+            ${CPPDIR}/LCOpenGLBuffer.cpp
+            ${CPPDIR}/LCFrameBufferObject.cpp
+            ${CPPDIR}/LCOpenGLVAO.cpp
             ${CPPDIR}/LCOpenGLShader.cpp
             ${CPPDIR}/LCOpenGLRender.cpp
             ${CPPDIR}/sample/TriangleSample.cpp
             ${CPPDIR}/sample/RectangleSample.cpp
             ${CPPDIR}/sample/LoadImageSample.cpp
             ${CPPDIR}/sample/CubeSample.cpp
-            ${CPPDIR}/sample/CubeImageSample.cpp)
+            ${CPPDIR}/sample/CubeImageSample.cpp
+            ${CPPDIR}/sample/TransitionSample.cpp
+            ${CPPDIR}/sample/TransitionL2RSample.cpp)
 
 add_library(LCOpenGLRender SHARED ${LIB_SRC})
 

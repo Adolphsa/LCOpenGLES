@@ -65,6 +65,11 @@ struct  CCFloat3{
     float z;
 };
 
+struct  CCFloat2{
+    float u;
+    float v;
+};
+
 struct  CCFloat4{
     float r;
     float g;
